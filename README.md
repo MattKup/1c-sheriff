@@ -110,6 +110,19 @@ Sheriff сам определяет конфигурацию по метадан
 - macOS 13 или новее (Apple Silicon или Intel). Windows — в разработке.
 - Установленный ИИ-агент (Codex, Claude Code или Cursor) с активной подпиской.
 
+## Открытый исходный код
+
+1C Sheriff вырос из открытых проектов и развивает их идеи для работы с реальными базами:
+
+- **[odata1c-gate](https://github.com/Romandredan/odata1c-gate)** Романа Данилова — шлюз между ИИ-агентом и 1С
+  через OData с маскированием данных. На его основе сделан Gateway Sheriff; часть рецептов и правил приватности
+  перенесена из него и доработана.
+- **[bb](https://github.com/get-bb/bb)** — открытая среда для работы с ИИ-агентами. На её основе сделано
+  настольное приложение Sheriff: чат, подключение агентов, панели.
+
+Оба проекта распространяются по лицензии MIT; их тексты лицензий и уведомления об авторских правах
+входят в поставку Sheriff. Спасибо авторам.
+
 ## Частые вопросы
 
 **Видит ли ИИ мои данные?** Агент видит структуру и числа (суммы, количества, даты, номера документов),
@@ -137,4 +150,5 @@ such as Codex (ChatGPT), Claude Code and Cursor. It gives the agent 15 read-only
 standard 1C configurations and parallel batch reads (up to 20 queries per call), answers business questions from
 1C registers, replaces personal and commercial values with stable tokens before they reach the agent, and shows
 real values only to the owner on the local machine.
+Built on open-source [odata1c-gate](https://github.com/Romandredan/odata1c-gate) by Roman Danilov and [bb](https://github.com/get-bb/bb), both MIT.
 Read-only edition and a draft-writing edition with owner confirmation. macOS; Windows in development.
